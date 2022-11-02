@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hdV-UV-IC0">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="QwM-Ha-8MW">
+            <objects>
+                <viewController id="hdV-UV-IC0" customClass="ViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bg4-M0-6wA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-Hz-R5K">
+                                <rect key="frame" x="62.666666666666657" y="304" width="249.99999999999997" height="204.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVk-aa-40G" userLabel="Label">
+                                        <rect key="frame" x="58" y="0.0" width="134" height="60"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="50"/>
+                                        <color key="textColor" red="0.039215686274509803" green="0.71764705882352942" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sud-9l-Oor">
+                                        <rect key="frame" x="0.0" y="110" width="250" height="94.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-O8-VcO">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <color key="backgroundColor" red="0.039215686274509803" green="0.71764705882352942" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="M9t-Wx-2Nv"/>
+                                                    <constraint firstAttribute="width" constant="250" id="ko4-y1-Oew"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="スタート"/>
+                                                <connections>
+                                                    <action selector="tapStartButton:" destination="hdV-UV-IC0" eventType="touchUpInside" id="rkv-9D-QCZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IF-fI-D8R">
+                                                <rect key="frame" x="0.0" y="60" width="250" height="34.333333333333343"/>
+                                                <color key="tintColor" red="0.039215686274509803" green="0.71764705882352942" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="リセット"/>
+                                                <connections>
+                                                    <action selector="tapResetButton:" destination="hdV-UV-IC0" eventType="touchUpInside" id="Ycr-lN-Ob1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CrX-ar-p6C"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bcP-Hz-R5K" firstAttribute="centerX" secondItem="Bg4-M0-6wA" secondAttribute="centerX" id="4td-LJ-pmA"/>
+                            <constraint firstItem="bcP-Hz-R5K" firstAttribute="centerY" secondItem="Bg4-M0-6wA" secondAttribute="centerY" id="zf1-IG-g1j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="OIe-O8-VcO" id="bFk-n9-xTO"/>
+                        <outlet property="timerLabel" destination="FVk-aa-40G" id="Go6-uT-Bvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0G-Rj-UBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925.5999999999999" y="5.9113300492610836"/>
+        </scene>
+    </scenes>
+</document>
